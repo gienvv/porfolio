@@ -1,0 +1,55 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom color palette */
+:root {
+    --brown-600: #8B4513; /* Warm brown for buttons and accents */
+    --brown-700: #6B3A0F; /* Hover state */
+    --brown-100: #F5E8DC; /* Light brown for tags */
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Button focus styles for accessibility */
+button:focus, a:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.3);
+}
+
+/* Profile image styling */
+img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile menu transitions */
+#mobile-menu {
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#mobile-menu.open {
+    max-height: 300px;
+}
+
+#home {
+    background: linear-gradient(to bottom, rgba(245, 245, 245, 1), rgba(255, 255, 255, 1));
+}
