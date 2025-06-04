@@ -1,0 +1,4 @@
+# Ignore sensitive or unnecessary files
+*.env
+/images/
+*.log
