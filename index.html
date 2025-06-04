@@ -3,109 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio of Your Name, a skilled web developer and software engineer">
+    <meta name="description" content="Web developer and Cybersecurity enthusiast.">
     <!-- Security: Prevent clickjacking -->
     <meta http-equiv="X-Frame-Options" content="DENY">
     <!-- Security: Prevent MIME type sniffing -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <!-- Security: Enforce HTTPS -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Your Name | Portfolio</title>
-    <!-- Tailwind CSS CDN for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>gien | Portfolio</title>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body class="bg-gray-50 font-sans antialiased">
+<body>
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm fixed top-0 w-full z-10">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-xl font-semibold text-gray-800">Your Name</div>
-            <div class="hidden md:flex space-x-6">
-                <a href="#home" class="text-gray-600 hover:text-brown-600 transition-colors duration-300">Home</a>
-                <a href="#about" class="text-gray-600 hover:text-brown-600 transition-colors duration-300">About</a>
-                <a href="#projects" class="text-gray-600 hover:text-brown-600 transition-colors duration-300">Projects</a>
-                <a href="#contact" class="text-gray-600 hover:text-brown-600 transition-colors duration-300">Contact</a>
+    <nav class="nav-fixed">
+        <div class="container nav-container">
+            <div class="nav-brand">gien</div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <!-- <a href="#upcoming" class="nav-link">Upcoming</a> -->
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#footer" class="nav-link">Contact</a>
             </div>
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none focus:ring-2 focus:ring-brown-600 rounded">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button id="mobile-menu-btn" class="mobile-menu-btn">
+                <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-            <a href="#home" class="block px-4 py-2 text-gray-600 hover:bg-brown-100">Home</a>
-            <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-brown-100">About</a>
-            <a href="#projects" class="block px-4 py-2 text-gray-600 hover:bg-brown-100">Projects</a>
-            <a href="#contact" class="block px-4 py-2 text-gray-600 hover:bg-brown-100">Contact</a>
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#home" class="mobile-menu-link">Home</a>
+            <a href="#about" class="mobile-menu-link">About</a>
+            <a href="#projects" class="mobile-menu-link">Projects</a>
+            <!-- <a href="#upcoming" class="mobile-menu-link">Upcoming</a> -->
+            <a href="#experience" class="mobile-menu-link">Experience</a>
+            <a href="#footer" class="mobile-menu-link">Contact</a>
         </div>
     </nav>
 
     <!-- Home Section (Split-Screen) -->
-    <section id="home" class="min-h-screen flex items-center pt-16">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row">
-            <!-- Left: Text Content (60%) -->
-            <div class="md:w-3/5 flex flex-col justify-center py-12 animate-fade-in">
-                <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-4">Hey there, I'm Your Name</h1>
-                <p class="text-xl md:text-2xl text-gray-600 mb-6">Web Developer & Software Engineer</p>
-                <div class="flex space-x-4 mb-6">
-                    <span class="bg-brown-100 text-brown-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
-                    <span class="bg-brown-100 text-brown-800 px-3 py-1 rounded-full text-sm">React</span>
-                    <span class="bg-brownSalmon-100 text-brown-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+    <section id="home" class="home-section">
+        <div class="container home-container">
+            <!-- Left: Text Content -->
+            <div class="home-text">
+                <h1 class="home-title">Hey there, I'm Gien</h1>
+                <p class="home-subtitle">Web Developer, IT/Administrative Support, Exploring Cybersecurity</p>
+                <div class="home-tags">
+                    <span class="tag">MERN Stack</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Cybersecurity</span>
+                    <span class="tag">Tech troubleshooting & user support</span>
+                    <span class="tag">Python</span>
                 </div>
-                <a href="#contact" class="inline-block bg-brown-600 text-white px-6 py-3 rounded-full hover:bg-brown-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-brown-600 focus:ring-offset-2">
-                    Say hello! 👋
-                </a>
+                <a href="https://instagram.com/gienvv" class="say-hello-link">Say hello! 👋</a>
             </div>
-            <!-- Right: Profile Image (40%) -->
-            <div class="md:w-2/5 flex justify-center items-center py-12">
-                <img src="./images/profile.jpg" alt="Your Name, a professional web developer" class="rounded-lg shadow-lg w-64 h-64 md:w-80 md:h-80 object-cover">
+            <!-- Right: Profile Image -->
+            <div class="home-image">
+                <img src="./images/profile.jpg" alt="Gien, a professional web developer" class="profile-img" loading="lazy">
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center">About Me</h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">I’m a passionate developer with 5+ years of experience building secure, user-friendly web applications. My expertise lies in JavaScript, React, and Node.js, with a focus on clean code and robust security practices.</p>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center">My Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Project 1</h3>
-                    <p class="text-gray-600 mb-4">A task management app built with React and Node.js.</p>
-                    <a href="https://github.com/yourusername/project1" class="text-brown-600 hover:underline">View on GitHub</a>
+    <section id="about" class="section">
+        <div class="container about-container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <!-- Left: Biographical Text -->
+                <div class="about-text">
+                    <p class="about-paragraph">I’m a Computer Engineering graduate from Bicol University, currently pursuing a Law degree to broaden my perspective. My academic background has equipped me with a strong foundation in problem-solving and technical skills.</p>
+                    <p class="about-paragraph">As a tech enthusiast, I stay updated with digital trends and social media, applying this knowledge to create user-focused designs and strategies that align with modern market demands.</p>
+                    <p class="about-paragraph">Outside of work, I enjoy playing the guitar and piano, visiting the shooting range, exploring cryptocurrency, and capturing moments through travel photography. I’m passionate about aesthetic design and can often be found sipping iced coffee while brainstorming new ideas.</p>
+                    <div class="interest-tags">
+                        <span class="interest-tag" data-tooltip="Play guitar and piano">Music</span>
+                        <span class="interest-tag" data-tooltip="Enjoy target practice">Shooting Range</span>
+                        <span class="interest-tag" data-tooltip="Explore blockchain and investments">Crypto</span>
+                        <span class="interest-tag" data-tooltip="Capture travel moments">Photography</span>
+                        <span class="interest-tag" data-tooltip="Love a good iced coffee">Iced Coffee</span>
+                    </div>
+                    <div class="support-options">
+                        <a href="https://ko-fi.com/gienvv" class="support-btn-text" target="_blank" rel="noopener noreferrer">Support me via Ko-fi</a>
+                        <button class="support-btn-text gcash-btn" aria-label="View QR code for support">Support via QR Code</button>
+                    </div>
                 </div>
-                <!-- Add more projects as needed -->
+                <!-- Right: Travel Photo -->
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="./images/gien.jpg" alt="Gien's Photo" class="travel-img" loading="lazy">
+                        <span class="image-caption hidden">Gien's Photo</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-semibold text-gray-800 mb-6">Get in Touch</h2>
-            <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">I’d love to hear from you! Reach out via email or connect with me on social platforms.</p>
-            <div class="flex justify-center space-x-6">
-                <a href="mailto:your.email@example.com" class="text-brown-600 hover:text-brown-700">Email</a>
-                <a href="https://github.com/yourusername" class="text-brown-600 hover:text-brown-700">GitHub</a>
-                <a href="https://linkedin.com/in/yourusername" class="text-brown-600 hover:text-brown-700">LinkedIn</a>
+    <!-- Modal for QR Code -->
+    <div id="gcash-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="modal-close">×</span>
+            <img src="./images/qr.jpg" alt="QR Code" class="modal-qr" loading="lazy">
+            <p class="modal-text">Scan to support via QR</p>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-gray">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3 class="project-title">Cybersecurity Quiz</h3>
+                    <p class="project-text">A beginner-friendly quiz with 10 randomized cybersecurity questions, featuring a progress bar and timer. Built with HTML, CSS, and JavaScript.</p>
+                    <div class="project-links">
+                        <a href="https://gienvv.github.io/Cybersecurity-Quiz/" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Try Cybersecurity Quiz">Try It</a>
+                        <a href="https://github.com/gienvv/Cybersecurity-Quiz" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View Cybersecurity Quiz on GitHub">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3 class="project-title">Password Generator</h3>
+                    <p class="project-text">A beginner password generator with strength indicator.</p>
+                    <div class="project-links">
+                        <a href="https://gienvv.github.io/password-generator/" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Try Password Generator">Try It</a>
+                        <a href="https://github.com/gienvv/password-generator/" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View Password Generator on GitHub">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Projects Section (Commented Out)
+  
+    <section id="upcoming" class="section">
+        <div class="container">
+            <div class="upcoming-upper">
+                <h2 class="section-title">Upcoming Projects</h2>
+                <p class="section-text">More projects coming soon. Stay tuned!</p>
+            </div>
+            <div class="upcoming-lower">
+                <div class="upcoming-quote">
+                    <blockquote class="quote-text">
+                        "The difference between ordinary and extraordinary is that little extra."
+                    </blockquote>
+                    <p class="quote-author">— Vince Lombardi</p>
+                </div>
+                <div class="upcoming-placeholder"></div>
+            </div>
+        </div>
+    </section>
+    -->
+
+
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-gray">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-list">
+                <!-- Experience Item -->
+                <div class="experience-card">
+                    <h3 class="experience-title">Web Developer</h3>
+                    <p class="experience-date">2023 - Present</p>
+                    <p class="experience-text">Developed and maintained responsive web applications using HTML, CSS, and JavaScript. Collaborated with cross-functional teams to deliver secure, user-friendly solutions. Implemented cybersecurity best practices in all projects.</p>
+                    <button class="expand-btn" aria-expanded="false" aria-controls="projects-2023">[+] View Key Projects</button>
+                    <div id="projects-2023" class="expand-content hidden">
+                        <p class="expand-text">Led development of a cybersecurity quiz application, improving user engagement by 20%. Built a password generator with real-time strength indicators.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag technical">HTML</span>
+                            <span class="skill-tag technical">CSS</span>
+                            <span class="skill-tag technical">JavaScript</span>
+                            <span class="skill-tag soft">Team Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Experience Item -->
+                <div class="experience-card">
+                    <h3 class="experience-title">IT Support Specialist</h3>
+                    <p class="experience-date">2022 - 2023</p>
+                    <p class="experience-text">Provided technical support for hardware and software issues, achieving a 95% resolution rate. Conducted user training sessions and documented troubleshooting processes.</p>
+                    <button class="expand-btn" aria-expanded="false" aria-controls="projects-2022">[+] View Key Projects</button>
+                    <div id="projects-2022" class="expand-content hidden">
+                        <p class="expand-text">Streamlined IT support workflows, reducing average ticket resolution time by 15%. Developed internal tools for system diagnostics.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag technical">IT Support</span>
+                            <span class="skill-tag administrative">Documentation</span>
+                            <span class="skill-tag soft">User Training</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
-        <div class="container mx-auto px-4 text-center">
-            <p>© 2025 Your Name. All rights reserved.</p>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <h2 class="footer-title">Have project in mind?</h2>
+            <p class="footer-text">I’m always excited to collaborate on new ideas. Drop me a message, and I’ll get back to you within 24 hours!</p>
+            <a href="mailto:gienbustilla@gmail.com?subject=New%20Web%20Project%20Collaboration" class="footer-email" aria-label="Email Gien for project collaboration">gienbustilla@gmail.com</a>
+            <div class="footer-socials">
+                <a href="https://linkedin.com/in/gienbustilla" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Visit Gien's LinkedIn profile">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    <span class="social-tooltip hidden">LinkedIn</span>
+                </a>
+                <a href="https://instagram.com/gienvv" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Visit Gien's Instagram profile">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.948-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                    <span class="social-tooltip hidden">Instagram</span>
+                </a>
+                <a href="https://threads.net/@gienvv" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Visit Gien's Threads profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-threads" viewBox="0 0 16 16">
+                        <path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161"/>
+                    </svg>
+                    <span class="social-tooltip hidden">Threads</span>
+                </a>
+                <a href="https://facebook.com/gienvv" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Visit Gien's Facebook profile">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    <span class="social-tooltip hidden">Facebook</span>
+                </a>
+            </div>
+            <p class="footer-copyright">© 2025 gien. All rights reserved.</p>
         </div>
     </footer>
 
