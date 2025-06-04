@@ -23,23 +23,21 @@
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#projects" class="nav-link">Projects</a>
-                <!-- <a href="#upcoming" class="nav-link">Upcoming</a> -->
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#footer" class="nav-link">Contact</a>
             </div>
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="mobile-menu-btn">
+            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle mobile menu">
                 <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu">
+        <div id="mobile-menu" class="mobile-menu hidden">
             <a href="#home" class="mobile-menu-link">Home</a>
             <a href="#about" class="mobile-menu-link">About</a>
             <a href="#projects" class="mobile-menu-link">Projects</a>
-            <!-- <a href="#upcoming" class="mobile-menu-link">Upcoming</a> -->
             <a href="#experience" class="mobile-menu-link">Experience</a>
             <a href="#footer" class="mobile-menu-link">Contact</a>
         </div>
@@ -56,10 +54,10 @@
                     <span class="tag">MERN Stack</span>
                     <span class="tag">React</span>
                     <span class="tag">Cybersecurity</span>
-                    <span class="tag">Tech troubleshooting & user support</span>
+                    <span class="tag">Tech troubleshooting</span>
                     <span class="tag">Python</span>
                 </div>
-                <a href="https://instagram.com/gienvv" class="say-hello-link">Say hello! 👋</a>
+                <a href="https://instagram.com/gienvv" class="say-hello-link" target="_blank" rel="noopener noreferrer">Say hello! 👋</a>
             </div>
             <!-- Right: Profile Image -->
             <div class="home-image">
@@ -93,8 +91,8 @@
                 <!-- Right: Travel Photo -->
                 <div class="about-image">
                     <div class="image-wrapper">
-                        <img src="./images/gien.jpg" alt="Gien's Photo" class="travel-img" loading="lazy">
-                        <span class="image-caption hidden">Gien's Photo</span>
+                        <img src="./images/gien.jpg" alt="Gien's travel photo" class="travel-img" loading="lazy">
+                        <span class="image-caption">Travel Photography</span>
                     </div>
                 </div>
             </div>
@@ -104,8 +102,8 @@
     <!-- Modal for QR Code -->
     <div id="gcash-modal" class="modal hidden">
         <div class="modal-content">
-            <span class="modal-close">×</span>
-            <img src="./images/qr.jpg" alt="QR Code" class="modal-qr" loading="lazy">
+            <span class="modal-close" aria-label="Close modal">×</span>
+            <img src="./images/qr.jpg" alt="Support QR Code" class="modal-qr" loading="lazy">
             <p class="modal-text">Scan to support via QR</p>
         </div>
     </div>
@@ -134,28 +132,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Upcoming Projects Section (Commented Out)
-  
-    <section id="upcoming" class="section">
-        <div class="container">
-            <div class="upcoming-upper">
-                <h2 class="section-title">Upcoming Projects</h2>
-                <p class="section-text">More projects coming soon. Stay tuned!</p>
-            </div>
-            <div class="upcoming-lower">
-                <div class="upcoming-quote">
-                    <blockquote class="quote-text">
-                        "The difference between ordinary and extraordinary is that little extra."
-                    </blockquote>
-                    <p class="quote-author">— Vince Lombardi</p>
-                </div>
-                <div class="upcoming-placeholder"></div>
-            </div>
-        </div>
-    </section>
-    -->
-
 
     <!-- Experience Section -->
     <section id="experience" class="section bg-gray">
@@ -200,7 +176,7 @@
     <!-- Footer -->
     <footer class="footer" id="footer">
         <div class="container">
-            <h2 class="footer-title">Have project in mind?</h2>
+            <h2 class="footer-title">Have a project in mind?</h2>
             <p class="footer-text">I’m always excited to collaborate on new ideas. Drop me a message, and I’ll get back to you within 24 hours!</p>
             <a href="mailto:gienbustilla@gmail.com?subject=New%20Web%20Project%20Collaboration" class="footer-email" aria-label="Email Gien for project collaboration">gienbustilla@gmail.com</a>
             <div class="footer-socials">
@@ -208,25 +184,25 @@
                     <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                     </svg>
-                    <span class="social-tooltip hidden">LinkedIn</span>
+                    <span class="social-tooltip">LinkedIn</span>
                 </a>
                 <a href="https://instagram.com/gienvv" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Visit Gien's Instagram profile">
                     <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.948-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                     </svg>
-                    <span class="social-tooltip hidden">Instagram</span>
+                    <span class="social-tooltip">Instagram</span>
                 </a>
                 <a href="https://threads.net/@gienvv" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Visit Gien's Threads profile">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-threads" viewBox="0 0 16 16">
+                    <svg class="social-icon" viewBox="0 0 16 16" fill="currentColor">
                         <path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161"/>
                     </svg>
-                    <span class="social-tooltip hidden">Threads</span>
+                    <span class="social-tooltip">Threads</span>
                 </a>
                 <a href="https://facebook.com/gienvv" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Visit Gien's Facebook profile">
                     <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                     </svg>
-                    <span class="social-tooltip hidden">Facebook</span>
+                    <span class="social-tooltip">Facebook</span>
                 </a>
             </div>
             <p class="footer-copyright">© 2025 gien. All rights reserved.</p>

@@ -1,3 +1,4 @@
+/* styles.css */
 /* Reset default margins and padding for consistency */
 * {
     margin: 0;
@@ -10,7 +11,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f5f5f5; /* Light gray background */
+    background-color: #fff; /* Pure white background */
 }
 
 /* Smooth scrolling for anchor links */
@@ -93,14 +94,29 @@ html {
     height: 1.5rem;
 }
 
-.mobile-menu {
-    display: none;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: max-height 0.3s ease-in-out;
-    max-height: 0;
-    overflow: hidden;
-}
+    .mobile-menu {
+        display: none;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        z-index: 15;
+    }
+    .mobile-menu.open {
+        display: block !important;
+        max-height: 400px;
+        opacity: 1;
+    }
+    .mobile-menu.hidden {
+        display: none !important;
+        opacity: 0;
+    }
 
 .mobile-menu.open {
     max-height: 300px;
@@ -407,7 +423,7 @@ html {
 
 /* General Section Styles */
 .section {
-    padding: 4rem 0;
+    padding: 2.5rem 0;
 }
 
 .section-title {
@@ -427,8 +443,8 @@ html {
 }
 
 /* Projects Section */
-.bg-gray {
-    background-color: #f5f5f5;
+ .bg-gray {
+    background-color: #fff;
 }
 
 .project-grid {
@@ -608,8 +624,8 @@ html {
 }
 
 /* Footer */
-.footer {
-    background-color: #f5f5f5;
+ .footer {
+    background-color: #fff;
     padding: 3rem 0;
     text-align: center;
 }
@@ -766,40 +782,91 @@ html {
         display: none;
     }
     .mobile-menu-btn {
-        display: block;
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-end;
+        background: none;
+        border: none;
+        padding: 0.5rem 0.75rem;
+        margin-right: 0.5rem;
+        box-shadow: none;
+        flex: none;
+        z-index: 20;
     }
+    .nav-container {
+        min-width: 0;
+        flex-wrap: nowrap;
+        overflow: visible;
+    }
+    .menu-icon {
+        width: 2.2rem;
+        height: 2.2rem;
+        color: var(--brown-600);
+        transition: color 0.2s;
+    }
+    .mobile-menu-btn:active .menu-icon,
+    .mobile-menu-btn:focus .menu-icon {
+        color: var(--brown-700);
+    }
+
+    /* Home title professional left spacing */
     .home-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        text-align: left;
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: -1px;
     }
     .home-subtitle {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
+        text-align: left;
+        margin-left: 0.5rem;
+        margin-bottom: 1rem;
     }
-    .profile-img {
-        width: 12rem;
-        height: 12rem;
+
+    /* Remove profile and travel images on mobile */
+    .profile-img,
+    .about-image,
+    .travel-img,
+    .image-wrapper {
+        display: none !important;
     }
-    .expand-btn {
-        font-size: 1rem; /* Larger touch target for mobile */
+
+    /* About text full width, professional spacing */
+    .about-text {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        text-align: left;
+        align-items: flex-start;
     }
     .about-paragraph {
         font-size: 1rem;
+        color: var(--gray-600);
+        margin-bottom: 1rem;
+        line-height: 1.7;
     }
-    .travel-img {
-        max-width: 100%;
+
+    /* Support buttons in one row only */
+    .support-options {
+        flex-direction: row !important;
+        gap: 0.5rem;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 1.5rem;
     }
-    .about-btn {
-        align-self: center;
+    .support-btn-text {
+        width: auto;
+        max-width: none;
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem;
     }
+
     .footer {
         padding: 2rem 0;
     }
     .footer-socials {
         flex-wrap: wrap;
         gap: 0.75rem;
-    }
-    .support-options {
-        flex-direction: column;
-        gap: 0.5rem;
     }
     .modal-content {
         padding: 1rem;

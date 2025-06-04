@@ -1,5 +1,4 @@
-// Smooth scrolling for navigation links
-// Selects all anchor tags with href starting with '#' and adds click event listeners
+// scripts.js
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault(); // Prevents default anchor behavior
